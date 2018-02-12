@@ -3,6 +3,7 @@
 Web-map creation module. The output web map shows information about places where movies were filmed that were shot in a particular year. The user specifies for films of which year they want to build a map and as a result receives an html file.
 
 * To make a web-map please run main module: mapmaker.py and put in the year and number of location
+* Map has some tools such as measuring distances and areas, full-screen mode, layers with different tags. Try it!
 * This module uses data from IMDB database (locations.list). It is possible to parse the file and update the data using parser.py, read function's documentations inside to get to know how to do it
 * To add new films from file which has new locations you can also use parser.py, but you should have your Google Maps Geocoding API key. You can get it at https://developers.google.com/maps/documentation/geocoding/start
 
