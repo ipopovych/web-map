@@ -6,7 +6,7 @@ import pickle
 
 def load_obj(name ):
     """
-    Loads Python object from file.
+    Loads Python object from file. File in web_map/data_obj.
     :param name: sting with the name of file to load object from.
     :return: python object from file
     """
@@ -16,7 +16,7 @@ def load_obj(name ):
 
 def save_obj(obj, name):
     """
-    Saves Python object as file.
+    Saves Python object as file. File in web_map/data_obj.
     :param obj: dict, list, etc.
     :param name: sting with the name of file to save object as.
     :return: None

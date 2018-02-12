@@ -38,7 +38,6 @@ def get_number_of_locations(year, all_locations):
     return number_of_locations
 
 
-
 def get_map_data(year, loc_dict, years_dict):
     """
     Returns data needed for map creation for given year as a list.
@@ -80,8 +79,8 @@ def choose_random_data(map_data, all_locations, n_locations):
             nums = list(random.sample(list(range(0,all_locations)), n_locations))
         except ValueError:
             print('Sample size exceeded population size.' + '\n' +
-            'Random generating failed.' + '\n' +
-            'Choosing first {} locations)'.format(n_locations))
+                  'Random generating failed.' + '\n' +
+                  'Choosing first {} locations)'.format(n_locations))
             nums = range(0, n_locations)
     else:
         nums = range(0, all_locations)
@@ -131,11 +130,11 @@ def create_map(map_data, all_locations, n_locations, year):
     folium.plugins.Fullscreen().add_to(map_1)
     folium.LayerControl().add_to(map_1)
 
-    file_name = 'Filmsmap_' + str(year) + '_tags' + str(n_locations) + '.html'
+    file_name = 'maps\Filmsmap_' + str(year) + '_tags' + str(n_locations) + '.html'
     map_1.save(file_name)
     print("Map created successfully. Saved as: {}".format(file_name))
-    print("Found locations: {}. \
-    See Heatmap layer with all locations included.".format(all_locations))
+    print("Found locations: {}." + '\n',
+          "See Heatmap layer with all locations included.".format(all_locations))
     print("Showing on map: {} tags of randomly choosed locations.".format(
                                                                    n_locations))
     return map_1
