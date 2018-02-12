@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_345272bd5a5f44019a10c2440668862f {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" />
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_345272bd5a5f44019a10c2440668862f" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_345272bd5a5f44019a10c2440668862f = L.map(
+                                  'map_345272bd5a5f44019a10c2440668862f',
+                                  {center: [52.3758916,9.732010400000002],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_536bf9701d1c425ba6d1fb88d4bb16d2 = L.tileLayer(
+                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_345272bd5a5f44019a10c2440668862f);
+        
+    
+            var marker_cluster_9ffef475bb1d44c091236c36d9ec8f40 = L.markerClusterGroup({
+                
+            });
+            map_345272bd5a5f44019a10c2440668862f.addLayer(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+            var marker_569cebfc7d0b46fb9e931983177e07d4 = L.marker(
+                [52.3758916,9.732010400000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_63c06db198ca496db7c62c78936112f0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_569cebfc7d0b46fb9e931983177e07d4.setIcon(icon_63c06db198ca496db7c62c78936112f0);
+            
+    
+            var popup_08f9995899034716a23175e9b9dfebeb = L.popup({maxWidth: '300'});
+
+            
+                var html_249b6c44d7134217ab29e9a65d5e3271 = $('<div id="html_249b6c44d7134217ab29e9a65d5e3271" style="width: 100.0%; height: 100.0%;">Hannover, Lower Saxony, Germany</div>')[0];
+                popup_08f9995899034716a23175e9b9dfebeb.setContent(html_249b6c44d7134217ab29e9a65d5e3271);
+            
+
+            marker_569cebfc7d0b46fb9e931983177e07d4.bindPopup(popup_08f9995899034716a23175e9b9dfebeb);
+
+            
+        
+    
+
+            var marker_1d5dbaeaa52c44ddb4a645326018f657 = L.marker(
+                [52.3555177,-1.1743197],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_0ef003294ccc4daca8906b5b05ed0b5c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1d5dbaeaa52c44ddb4a645326018f657.setIcon(icon_0ef003294ccc4daca8906b5b05ed0b5c);
+            
+    
+            var popup_f38cdf3ee49a4008abe1b1e9a75b4e20 = L.popup({maxWidth: '300'});
+
+            
+                var html_f52899be715f47868051c51fb690a234 = $('<div id="html_f52899be715f47868051c51fb690a234" style="width: 100.0%; height: 100.0%;">England, UK</div>')[0];
+                popup_f38cdf3ee49a4008abe1b1e9a75b4e20.setContent(html_f52899be715f47868051c51fb690a234);
+            
+
+            marker_1d5dbaeaa52c44ddb4a645326018f657.bindPopup(popup_f38cdf3ee49a4008abe1b1e9a75b4e20);
+
+            
+        
+    
+
+            var marker_3cf6a79d7c2749be8a6138ebdf2300ac = L.marker(
+                [53.8007554,-1.5490774],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_2c20cdede5584864ba084b867456e3f9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3cf6a79d7c2749be8a6138ebdf2300ac.setIcon(icon_2c20cdede5584864ba084b867456e3f9);
+            
+    
+            var popup_9916baa0bcf54d3ab731fc5cd8ea29a6 = L.popup({maxWidth: '300'});
+
+            
+                var html_851a160ba2514d35812f5017510378af = $('<div id="html_851a160ba2514d35812f5017510378af" style="width: 100.0%; height: 100.0%;">Leeds, West Yorkshire, England, UK</div>')[0];
+                popup_9916baa0bcf54d3ab731fc5cd8ea29a6.setContent(html_851a160ba2514d35812f5017510378af);
+            
+
+            marker_3cf6a79d7c2749be8a6138ebdf2300ac.bindPopup(popup_9916baa0bcf54d3ab731fc5cd8ea29a6);
+
+            
+        
+    
+
+            var marker_42cae49d0b3c46c9b2b46f1d374d1813 = L.marker(
+                [53.8305812,-1.5073744],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_909d2015c45241fa9f68aff6599a612e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_42cae49d0b3c46c9b2b46f1d374d1813.setIcon(icon_909d2015c45241fa9f68aff6599a612e);
+            
+    
+            var popup_1979491ccdc4489f8f93e2d4f2aad7ed = L.popup({maxWidth: '300'});
+
+            
+                var html_ef60faf53b62445ab3081911a67b1af0 = $('<div id="html_ef60faf53b62445ab3081911a67b1af0" style="width: 100.0%; height: 100.0%;">Roundhay, Leeds, West Yorkshire, England, UK</div>')[0];
+                popup_1979491ccdc4489f8f93e2d4f2aad7ed.setContent(html_ef60faf53b62445ab3081911a67b1af0);
+            
+
+            marker_42cae49d0b3c46c9b2b46f1d374d1813.bindPopup(popup_1979491ccdc4489f8f93e2d4f2aad7ed);
+
+            
+        
+    
+
+            var marker_c48a70798946448f8d234844e2686dfb = L.marker(
+                [55.378051,-3.435973],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_1080e1896fb9451090b53e60dad35f1e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c48a70798946448f8d234844e2686dfb.setIcon(icon_1080e1896fb9451090b53e60dad35f1e);
+            
+    
+            var popup_00d548db96f64e0d8e58c042cc5e031d = L.popup({maxWidth: '300'});
+
+            
+                var html_75dc88281f9547c79601e0054a4eea8d = $('<div id="html_75dc88281f9547c79601e0054a4eea8d" style="width: 100.0%; height: 100.0%;">UK</div>')[0];
+                popup_00d548db96f64e0d8e58c042cc5e031d.setContent(html_75dc88281f9547c79601e0054a4eea8d);
+            
+
+            marker_c48a70798946448f8d234844e2686dfb.bindPopup(popup_00d548db96f64e0d8e58c042cc5e031d);
+
+            
+        
+    
+
+            var marker_4188c70e1ee5460786238323e2a46350 = L.marker(
+                [53.81081760000001,-1.76261],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_48f12d4adc8f46b99fe244f81de333c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4188c70e1ee5460786238323e2a46350.setIcon(icon_48f12d4adc8f46b99fe244f81de333c5);
+            
+    
+            var popup_4caa7a4ab12748dd9f61f1139b5456a1 = L.popup({maxWidth: '300'});
+
+            
+                var html_3812fe2af99845448393d1d7960e93c4 = $('<div id="html_3812fe2af99845448393d1d7960e93c4" style="width: 100.0%; height: 100.0%;">West Yorkshire, England, UK</div>')[0];
+                popup_4caa7a4ab12748dd9f61f1139b5456a1.setContent(html_3812fe2af99845448393d1d7960e93c4);
+            
+
+            marker_4188c70e1ee5460786238323e2a46350.bindPopup(popup_4caa7a4ab12748dd9f61f1139b5456a1);
+
+            
+        
+    
+
+            var marker_7c2008f1b8874eae952323758ddc013a = L.marker(
+                [53.8007554,-1.5490774],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_9ffef475bb1d44c091236c36d9ec8f40);
+            
+    
+
+                var icon_696f758462604f17b4a4ec5fbff5248b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c2008f1b8874eae952323758ddc013a.setIcon(icon_696f758462604f17b4a4ec5fbff5248b);
+            
+    
+            var popup_ad11735cf4c3462282710198dee98cc1 = L.popup({maxWidth: '300'});
+
+            
+                var html_4f57c03e928549e0b695116ea28d832a = $('<div id="html_4f57c03e928549e0b695116ea28d832a" style="width: 100.0%; height: 100.0%;">Leeds, West Yorkshire, England, UK</div>')[0];
+                popup_ad11735cf4c3462282710198dee98cc1.setContent(html_4f57c03e928549e0b695116ea28d832a);
+            
+
+            marker_7c2008f1b8874eae952323758ddc013a.bindPopup(popup_ad11735cf4c3462282710198dee98cc1);
+
+            
+        
+    
+            var marker_cluster_dd79378c86ff4765a1299e0ab4b873af = L.markerClusterGroup({
+                
+            });
+            map_345272bd5a5f44019a10c2440668862f.addLayer(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+            var marker_3e33fac5f640410aace2575f92e4f8d0 = L.marker(
+                [52.3758916,9.732010400000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_9077d0380a734aa488fedffacd487e3c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3e33fac5f640410aace2575f92e4f8d0.setIcon(icon_9077d0380a734aa488fedffacd487e3c);
+            
+    
+            var popup_2d92245711c84968874ba65e25e90217 = L.popup({maxWidth: '300'});
+
+            
+                var html_10c41615957541aaae56988480b9bd31 = $('<div id="html_10c41615957541aaae56988480b9bd31" style="width: 100.0%; height: 100.0%;">Pferd und Reiter Springen ber ein Hindernis</div>')[0];
+                popup_2d92245711c84968874ba65e25e90217.setContent(html_10c41615957541aaae56988480b9bd31);
+            
+
+            marker_3e33fac5f640410aace2575f92e4f8d0.bindPopup(popup_2d92245711c84968874ba65e25e90217);
+
+            
+        
+    
+
+            var marker_32ff27bcdb334c9399cc0bca02dbfb1c = L.marker(
+                [52.3555177,-1.1743197],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_50175d57e6af49d8a2efad8da86f6907 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_32ff27bcdb334c9399cc0bca02dbfb1c.setIcon(icon_50175d57e6af49d8a2efad8da86f6907);
+            
+    
+            var popup_49160d8d4dab49859fc755d0736ac309 = L.popup({maxWidth: '300'});
+
+            
+                var html_3375aed2d4d444e782248457771b430c = $('<div id="html_3375aed2d4d444e782248457771b430c" style="width: 100.0%; height: 100.0%;">Roundhay Garden Scene</div>')[0];
+                popup_49160d8d4dab49859fc755d0736ac309.setContent(html_3375aed2d4d444e782248457771b430c);
+            
+
+            marker_32ff27bcdb334c9399cc0bca02dbfb1c.bindPopup(popup_49160d8d4dab49859fc755d0736ac309);
+
+            
+        
+    
+
+            var marker_0e34a711e9a048058d9b6a06b1f541a0 = L.marker(
+                [53.8007554,-1.5490774],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_2e5a2353374d40f2aa4f65d1216cf340 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e34a711e9a048058d9b6a06b1f541a0.setIcon(icon_2e5a2353374d40f2aa4f65d1216cf340);
+            
+    
+            var popup_f7875060dc4d4d7f80deb899d69c7ae9 = L.popup({maxWidth: '300'});
+
+            
+                var html_1bf1d7312b594e7c8d7398343d9859c9 = $('<div id="html_1bf1d7312b594e7c8d7398343d9859c9" style="width: 100.0%; height: 100.0%;">Roundhay Garden Scene</div>')[0];
+                popup_f7875060dc4d4d7f80deb899d69c7ae9.setContent(html_1bf1d7312b594e7c8d7398343d9859c9);
+            
+
+            marker_0e34a711e9a048058d9b6a06b1f541a0.bindPopup(popup_f7875060dc4d4d7f80deb899d69c7ae9);
+
+            
+        
+    
+
+            var marker_d6a5447da4a14590a37b2e6df5564c03 = L.marker(
+                [53.8305812,-1.5073744],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_ea3ef4dc63bd450f9490efab5ce4f9b5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d6a5447da4a14590a37b2e6df5564c03.setIcon(icon_ea3ef4dc63bd450f9490efab5ce4f9b5);
+            
+    
+            var popup_0e2bb338ec614301a5f4ad84a7c53ada = L.popup({maxWidth: '300'});
+
+            
+                var html_4eae77ce6551487a9cd43965cae89550 = $('<div id="html_4eae77ce6551487a9cd43965cae89550" style="width: 100.0%; height: 100.0%;">Roundhay Garden Scene</div>')[0];
+                popup_0e2bb338ec614301a5f4ad84a7c53ada.setContent(html_4eae77ce6551487a9cd43965cae89550);
+            
+
+            marker_d6a5447da4a14590a37b2e6df5564c03.bindPopup(popup_0e2bb338ec614301a5f4ad84a7c53ada);
+
+            
+        
+    
+
+            var marker_281fbca498cb416a9e6412a5ecea9ce2 = L.marker(
+                [55.378051,-3.435973],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_426d59e0bb7d4fb4a878488ba677913f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_281fbca498cb416a9e6412a5ecea9ce2.setIcon(icon_426d59e0bb7d4fb4a878488ba677913f);
+            
+    
+            var popup_9d0cf78c8fb54b428ff67882fe3a091a = L.popup({maxWidth: '300'});
+
+            
+                var html_04f9e94792324cd189ce38429cd37604 = $('<div id="html_04f9e94792324cd189ce38429cd37604" style="width: 100.0%; height: 100.0%;">Roundhay Garden Scene</div>')[0];
+                popup_9d0cf78c8fb54b428ff67882fe3a091a.setContent(html_04f9e94792324cd189ce38429cd37604);
+            
+
+            marker_281fbca498cb416a9e6412a5ecea9ce2.bindPopup(popup_9d0cf78c8fb54b428ff67882fe3a091a);
+
+            
+        
+    
+
+            var marker_fabb698c5f5b470993627b55f36714a1 = L.marker(
+                [53.81081760000001,-1.76261],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_a9317e0d82fa4bf488ef759b55d38c0a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fabb698c5f5b470993627b55f36714a1.setIcon(icon_a9317e0d82fa4bf488ef759b55d38c0a);
+            
+    
+            var popup_c77bf893a1a54bbaa101d0020e889348 = L.popup({maxWidth: '300'});
+
+            
+                var html_e6dd643a48e94b7488378a5ae367eb0a = $('<div id="html_e6dd643a48e94b7488378a5ae367eb0a" style="width: 100.0%; height: 100.0%;">Roundhay Garden Scene</div>')[0];
+                popup_c77bf893a1a54bbaa101d0020e889348.setContent(html_e6dd643a48e94b7488378a5ae367eb0a);
+            
+
+            marker_fabb698c5f5b470993627b55f36714a1.bindPopup(popup_c77bf893a1a54bbaa101d0020e889348);
+
+            
+        
+    
+
+            var marker_7c59956d060e4d1eae788d50f4f69fce = L.marker(
+                [53.8007554,-1.5490774],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_dd79378c86ff4765a1299e0ab4b873af);
+            
+    
+
+                var icon_4445b185422f4526bbb2f62ca69dc78c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c59956d060e4d1eae788d50f4f69fce.setIcon(icon_4445b185422f4526bbb2f62ca69dc78c);
+            
+    
+            var popup_b7b52048cadb4dd58895a9a14715bc6f = L.popup({maxWidth: '300'});
+
+            
+                var html_30bf48ee74d344a0b1dc40c530bbffcb = $('<div id="html_30bf48ee74d344a0b1dc40c530bbffcb" style="width: 100.0%; height: 100.0%;">Traffic Crossing Leeds Bridge</div>')[0];
+                popup_b7b52048cadb4dd58895a9a14715bc6f.setContent(html_30bf48ee74d344a0b1dc40c530bbffcb);
+            
+
+            marker_7c59956d060e4d1eae788d50f4f69fce.bindPopup(popup_b7b52048cadb4dd58895a9a14715bc6f);
+
+            
+        
+    
+            var heat_map_b30342ef928c4d7cababd99782d4fc2f = L.heatLayer(
+                [[52.3758916, 9.732010400000002], [52.3555177, -1.1743197], [53.8007554, -1.5490774], [53.8305812, -1.5073744], [55.378051, -3.435973], [53.81081760000001, -1.76261], [53.8007554, -1.5490774]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(map_345272bd5a5f44019a10c2440668862f);
+        
+    
+            var measure_control_967c4cc917ba4d9b9e3c198d805b9e26 = new L.Control.Measure(
+            {"position": "topright", "primaryLengthUnit": "meters", "secondaryLengthUnit": "miles", "primaryAreaUnit": "sqmeters", "secondaryAreaUnit": "acres"});
+            map_345272bd5a5f44019a10c2440668862f.addControl(measure_control_967c4cc917ba4d9b9e3c198d805b9e26);
+
+        
+    
+            L.control.fullscreen({
+                position: 'topleft',
+                title: 'Full Screen',
+                titleCancel: 'Exit Full Screen',
+                forceSeparateButton: false,
+                }).addTo(map_345272bd5a5f44019a10c2440668862f);
+            map_345272bd5a5f44019a10c2440668862f.on('enterFullscreen', function(){
+                console.log('entered fullscreen');
+            });
+
+        
+    
+            var layer_control_17bd6619995a4d4fb72c411096b475fa = {
+                base_layers : { "cartodbdark_matter" : tile_layer_536bf9701d1c425ba6d1fb88d4bb16d2, },
+                overlays : { "Location Tags" : marker_cluster_9ffef475bb1d44c091236c36d9ec8f40,"Film Tags" : marker_cluster_dd79378c86ff4765a1299e0ab4b873af,"Coloured Heatmap" : heat_map_b30342ef928c4d7cababd99782d4fc2f, }
+                };
+            L.control.layers(
+                layer_control_17bd6619995a4d4fb72c411096b475fa.base_layers,
+                layer_control_17bd6619995a4d4fb72c411096b475fa.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_345272bd5a5f44019a10c2440668862f);
+        
+</script>
