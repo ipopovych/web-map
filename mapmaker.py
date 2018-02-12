@@ -11,8 +11,9 @@ def get_year():
     """
     try:
         year = int(input("Enter a year: "))
-        assert 1889 < year <= 2024 or year in [1251,1478,1874,1888,2315,
-        2551,4906,5514,7921,8341], "Wrong number. Yeat between 1890 and 2024 or\
+        assert 1889 < year <= 2024 or year in [1251, 1478, 1874, 1888, 2315,
+                                               2551, 4906, 5514, 7921, 8341], \
+            "Wrong number. Year between 1890 and 2024 or\
          1251, 1478, 1874, 1888, 2315, 2551, 4906, 5514, 7921, 8341"
     except ValueError:
         print("Enter integers only. Try again.")
