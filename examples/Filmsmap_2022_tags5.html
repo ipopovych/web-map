@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_42a9929a216541bd88d507da7f0ed3f7 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" />
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+    <script src="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/ljagis/leaflet-measure/2.1.7/dist/leaflet-measure.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css" />
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_42a9929a216541bd88d507da7f0ed3f7" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_42a9929a216541bd88d507da7f0ed3f7 = L.map(
+                                  'map_42a9929a216541bd88d507da7f0ed3f7',
+                                  {center: [37.7895408,-122.394228],
+                                  zoom: 12,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_04200e5e7262461b8e14db7f64863828 = L.tileLayer(
+                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_42a9929a216541bd88d507da7f0ed3f7);
+        
+    
+            var marker_cluster_f188d5f7dc8b4044a0040902b5266177 = L.markerClusterGroup({
+                
+            });
+            map_42a9929a216541bd88d507da7f0ed3f7.addLayer(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+            var marker_64f991f9b21d4177b95bdcdb29ab17b8 = L.marker(
+                [37.7895408,-122.394228],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+                var icon_83f1e1d07753440fbc7d17b97a349339 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_64f991f9b21d4177b95bdcdb29ab17b8.setIcon(icon_83f1e1d07753440fbc7d17b97a349339);
+            
+    
+            var popup_4cee328a795043b7a4a6b22571e8b340 = L.popup({maxWidth: '300'});
+
+            
+                var html_dda69c11906447cdbecf6373d8b7693c = $('<div id="html_dda69c11906447cdbecf6373d8b7693c" style="width: 100.0%; height: 100.0%;">301 Howard Street, San Francisco, California, USA</div>')[0];
+                popup_4cee328a795043b7a4a6b22571e8b340.setContent(html_dda69c11906447cdbecf6373d8b7693c);
+            
+
+            marker_64f991f9b21d4177b95bdcdb29ab17b8.bindPopup(popup_4cee328a795043b7a4a6b22571e8b340);
+
+            
+        
+    
+
+            var marker_0218b52338b14d1ca775c2e7c045705f = L.marker(
+                [37.6818745,-121.7680088],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+                var icon_0b45cd84af6749418edc47556561b5a2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0218b52338b14d1ca775c2e7c045705f.setIcon(icon_0b45cd84af6749418edc47556561b5a2);
+            
+    
+            var popup_0ca6f2d220bc4b69a08b287f76fd4af2 = L.popup({maxWidth: '300'});
+
+            
+                var html_db99a13038b9466c9b7a3ac46aba1b1c = $('<div id="html_db99a13038b9466c9b7a3ac46aba1b1c" style="width: 100.0%; height: 100.0%;">Livermore, California, USA</div>')[0];
+                popup_0ca6f2d220bc4b69a08b287f76fd4af2.setContent(html_db99a13038b9466c9b7a3ac46aba1b1c);
+            
+
+            marker_0218b52338b14d1ca775c2e7c045705f.bindPopup(popup_0ca6f2d220bc4b69a08b287f76fd4af2);
+
+            
+        
+    
+
+            var marker_297b6e5b0775426a90e07df01989c422 = L.marker(
+                [24.453884,54.3773438],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+                var icon_dd75c8f8469a4cf282c2ed1191eab57c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_297b6e5b0775426a90e07df01989c422.setIcon(icon_dd75c8f8469a4cf282c2ed1191eab57c);
+            
+    
+            var popup_892beef0aa414ef49c990bce367e1522 = L.popup({maxWidth: '300'});
+
+            
+                var html_2d3ed89f32b34941bf60850bb8a1b6fd = $('<div id="html_2d3ed89f32b34941bf60850bb8a1b6fd" style="width: 100.0%; height: 100.0%;">Abu Dhabi, United Arab Emirates</div>')[0];
+                popup_892beef0aa414ef49c990bce367e1522.setContent(html_2d3ed89f32b34941bf60850bb8a1b6fd);
+            
+
+            marker_297b6e5b0775426a90e07df01989c422.bindPopup(popup_892beef0aa414ef49c990bce367e1522);
+
+            
+        
+    
+
+            var marker_73bcd9eb983d4b1f8b3120a613206e2c = L.marker(
+                [41.8239891,-71.4128343],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+                var icon_996ce00252d043e8bdf29cc1f9c1bf69 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_73bcd9eb983d4b1f8b3120a613206e2c.setIcon(icon_996ce00252d043e8bdf29cc1f9c1bf69);
+            
+    
+            var popup_7ea5374684bd4710ab39a97a52ee582e = L.popup({maxWidth: '300'});
+
+            
+                var html_5e044c8b76cb4e06bf9dfb73eff8d7ed = $('<div id="html_5e044c8b76cb4e06bf9dfb73eff8d7ed" style="width: 100.0%; height: 100.0%;">Providence, Rhode Island, USA</div>')[0];
+                popup_7ea5374684bd4710ab39a97a52ee582e.setContent(html_5e044c8b76cb4e06bf9dfb73eff8d7ed);
+            
+
+            marker_73bcd9eb983d4b1f8b3120a613206e2c.bindPopup(popup_7ea5374684bd4710ab39a97a52ee582e);
+
+            
+        
+    
+
+            var marker_d1722638eade4e52bb1e22d26167bb63 = L.marker(
+                [41.6259211,-71.2134231],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_f188d5f7dc8b4044a0040902b5266177);
+            
+    
+
+                var icon_58fbe9fbd8fc45378bd1f9a3edda986c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d1722638eade4e52bb1e22d26167bb63.setIcon(icon_58fbe9fbd8fc45378bd1f9a3edda986c);
+            
+    
+            var popup_37b4c2b8dbb84ac6962cf52260a7c229 = L.popup({maxWidth: '300'});
+
+            
+                var html_feb2a24854414e8b944b2fdb4c44173e = $('<div id="html_feb2a24854414e8b944b2fdb4c44173e" style="width: 100.0%; height: 100.0%;">Tiverton, Rhode Island, USA</div>')[0];
+                popup_37b4c2b8dbb84ac6962cf52260a7c229.setContent(html_feb2a24854414e8b944b2fdb4c44173e);
+            
+
+            marker_d1722638eade4e52bb1e22d26167bb63.bindPopup(popup_37b4c2b8dbb84ac6962cf52260a7c229);
+
+            
+        
+    
+            var marker_cluster_27a2095cea7449f6b35058491b284c6b = L.markerClusterGroup({
+                
+            });
+            map_42a9929a216541bd88d507da7f0ed3f7.addLayer(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+            var marker_caa1011ccf4747c28869a64aed9eaf37 = L.marker(
+                [37.7895408,-122.394228],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+                var icon_3fef7fb4a1fe4827b2d6ba71ce7603c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_caa1011ccf4747c28869a64aed9eaf37.setIcon(icon_3fef7fb4a1fe4827b2d6ba71ce7603c5);
+            
+    
+            var popup_22559ba6c09f498590cda4587331e2bb = L.popup({maxWidth: '300'});
+
+            
+                var html_372fa7c1a3e94e7891bf40b97fceb4f5 = $('<div id="html_372fa7c1a3e94e7891bf40b97fceb4f5" style="width: 100.0%; height: 100.0%;">Fuzzy Gets a House</div>')[0];
+                popup_22559ba6c09f498590cda4587331e2bb.setContent(html_372fa7c1a3e94e7891bf40b97fceb4f5);
+            
+
+            marker_caa1011ccf4747c28869a64aed9eaf37.bindPopup(popup_22559ba6c09f498590cda4587331e2bb);
+
+            
+        
+    
+
+            var marker_106c412717f2436ea6efd296ca9e5ba6 = L.marker(
+                [37.6818745,-121.7680088],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+                var icon_7cc1015b79b942058fd34e9022b1bf63 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_106c412717f2436ea6efd296ca9e5ba6.setIcon(icon_7cc1015b79b942058fd34e9022b1bf63);
+            
+    
+            var popup_030c5afdcfa54563bd67279945f3e15e = L.popup({maxWidth: '300'});
+
+            
+                var html_d2b0bb81e0974900935de3d1719ff3c1 = $('<div id="html_d2b0bb81e0974900935de3d1719ff3c1" style="width: 100.0%; height: 100.0%;">Fuzzy Gets a House</div>')[0];
+                popup_030c5afdcfa54563bd67279945f3e15e.setContent(html_d2b0bb81e0974900935de3d1719ff3c1);
+            
+
+            marker_106c412717f2436ea6efd296ca9e5ba6.bindPopup(popup_030c5afdcfa54563bd67279945f3e15e);
+
+            
+        
+    
+
+            var marker_b154773a2cff4a5eb268bb6a28785aa6 = L.marker(
+                [24.453884,54.3773438],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+                var icon_7b186de9743c4f9faae2392c0e42c7d3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b154773a2cff4a5eb268bb6a28785aa6.setIcon(icon_7b186de9743c4f9faae2392c0e42c7d3);
+            
+    
+            var popup_db1f4b35e340453ab70024d96f5cbab8 = L.popup({maxWidth: '300'});
+
+            
+                var html_f455df3c8f144eb192af1a452b6f4895 = $('<div id="html_f455df3c8f144eb192af1a452b6f4895" style="width: 100.0%; height: 100.0%;">The Mahabharata: Part 2</div>')[0];
+                popup_db1f4b35e340453ab70024d96f5cbab8.setContent(html_f455df3c8f144eb192af1a452b6f4895);
+            
+
+            marker_b154773a2cff4a5eb268bb6a28785aa6.bindPopup(popup_db1f4b35e340453ab70024d96f5cbab8);
+
+            
+        
+    
+
+            var marker_64b156e9dd6d4df183f4ce9d9b5d8e41 = L.marker(
+                [41.8239891,-71.4128343],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+                var icon_563522aa89b049818166c668f956074a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_64b156e9dd6d4df183f4ce9d9b5d8e41.setIcon(icon_563522aa89b049818166c668f956074a);
+            
+    
+            var popup_9d29134600c14438af43b14c1a65402c = L.popup({maxWidth: '300'});
+
+            
+                var html_5e754b8407ed4a14922e3569df8c7316 = $('<div id="html_5e754b8407ed4a14922e3569df8c7316" style="width: 100.0%; height: 100.0%;">We Are Bochek</div>')[0];
+                popup_9d29134600c14438af43b14c1a65402c.setContent(html_5e754b8407ed4a14922e3569df8c7316);
+            
+
+            marker_64b156e9dd6d4df183f4ce9d9b5d8e41.bindPopup(popup_9d29134600c14438af43b14c1a65402c);
+
+            
+        
+    
+
+            var marker_c4e49b85e083499987026515364e6827 = L.marker(
+                [41.6259211,-71.2134231],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_27a2095cea7449f6b35058491b284c6b);
+            
+    
+
+                var icon_72e12f30f16445a5b85f9736564e0389 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c4e49b85e083499987026515364e6827.setIcon(icon_72e12f30f16445a5b85f9736564e0389);
+            
+    
+            var popup_7d514796a6cf4480b107ec8370ea5223 = L.popup({maxWidth: '300'});
+
+            
+                var html_8985c2aae69e4881a69d3d84757982f6 = $('<div id="html_8985c2aae69e4881a69d3d84757982f6" style="width: 100.0%; height: 100.0%;">We Are Bochek</div>')[0];
+                popup_7d514796a6cf4480b107ec8370ea5223.setContent(html_8985c2aae69e4881a69d3d84757982f6);
+            
+
+            marker_c4e49b85e083499987026515364e6827.bindPopup(popup_7d514796a6cf4480b107ec8370ea5223);
+
+            
+        
+    
+            var heat_map_d1bd9e8126814ea8b521bee83248568b = L.heatLayer(
+                [[37.7895408, -122.394228], [37.6818745, -121.7680088], [24.453884, 54.3773438], [41.8239891, -71.4128343], [41.6259211, -71.2134231]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(map_42a9929a216541bd88d507da7f0ed3f7);
+        
+    
+            var measure_control_0109a2dd87f34ee1b157c7fc702b2d90 = new L.Control.Measure(
+            {"position": "topright", "primaryLengthUnit": "meters", "secondaryLengthUnit": "miles", "primaryAreaUnit": "sqmeters", "secondaryAreaUnit": "acres"});
+            map_42a9929a216541bd88d507da7f0ed3f7.addControl(measure_control_0109a2dd87f34ee1b157c7fc702b2d90);
+
+        
+    
+            L.control.fullscreen({
+                position: 'topleft',
+                title: 'Full Screen',
+                titleCancel: 'Exit Full Screen',
+                forceSeparateButton: false,
+                }).addTo(map_42a9929a216541bd88d507da7f0ed3f7);
+            map_42a9929a216541bd88d507da7f0ed3f7.on('enterFullscreen', function(){
+                console.log('entered fullscreen');
+            });
+
+        
+    
+            var layer_control_1b8de43bc6f34c70a64f8e341ba92c79 = {
+                base_layers : { "cartodbdark_matter" : tile_layer_04200e5e7262461b8e14db7f64863828, },
+                overlays : { "Location Tags" : marker_cluster_f188d5f7dc8b4044a0040902b5266177,"Film Tags" : marker_cluster_27a2095cea7449f6b35058491b284c6b,"Coloured Heatmap" : heat_map_d1bd9e8126814ea8b521bee83248568b, }
+                };
+            L.control.layers(
+                layer_control_1b8de43bc6f34c70a64f8e341ba92c79.base_layers,
+                layer_control_1b8de43bc6f34c70a64f8e341ba92c79.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_42a9929a216541bd88d507da7f0ed3f7);
+        
+</script>
