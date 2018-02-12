@@ -21,7 +21,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-* **Iryna Popovych** - *Initial work* - [IrnaPopovych](https://github.com/ipopovych)
+* **Iryna Popovych** - *Initial work* - [IrynaPopovych](https://github.com/ipopovych)
 
 ## License
 
