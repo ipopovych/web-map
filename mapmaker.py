@@ -28,9 +28,9 @@ def get_number_of_locations(year, all_locations):
     :return number_of_locations: integer, given number of locations
     """
     try:
-        print("Enter number of films to put location tags on map. \
-        Max avialable: {}".format(all_locations))
-        number_of_locations = int(input("(Number < 5000 recomended): "))
+        print("Enter number of films to put location tags on map.", '\n' +
+              "Max available: {}".format(all_locations))
+        number_of_locations = int(input("(Number < 5000 recommended): "))
         assert 0 < number_of_locations <= all_locations, "Wrong number."
     except ValueError:
         print("Enter integers only. Try again.")
@@ -133,9 +133,9 @@ def create_map(map_data, all_locations, n_locations, year):
     file_name = 'maps\Filmsmap_' + str(year) + '_tags' + str(n_locations) + '.html'
     map_1.save(file_name)
     print("Map created successfully. Saved as: {}".format(file_name))
-    print("Found locations: {}." + '\n',
-          "See Heatmap layer with all locations included.".format(all_locations))
-    print("Showing on map: {} tags of randomly choosed locations.".format(
+    print("Found locations: {}.".format(all_locations) + '\n' +
+          "See Heatmap layer with all locations included.")
+    print("Showing on map: {} tags of randomly chosen locations.".format(
                                                                    n_locations))
     return map_1
 
