@@ -1,0 +1,2 @@
+googlemaps==2.5.1
+folium==0.5.0
